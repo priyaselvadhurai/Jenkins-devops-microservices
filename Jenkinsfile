@@ -58,8 +58,7 @@ pipeline {
 		 steps{
 		   script{
 			 docker.withRegistry('','dockerhub'){
-			   dockerImage.push();
-			   dockerImage.push('latest');
+			   docker push lakshmisharp/currency-exchange-devops:$env.BUILD_TAG
 			  }
 			}
 		  }
