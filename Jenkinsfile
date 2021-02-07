@@ -49,7 +49,7 @@ pipeline {
 		 steps{
           //"docker build -t lakshmisharp/currency-exchange-devops:$env.BUILD_TAG"
            script{
-             dockerImage = docker build("lakshmisharp/currency-exchange-devops:${env.BUILD_TAG}")
+             dockerImage = docker.build("lakshmisharp/currency-exchange-devops:${env.BUILD_TAG}")
 		      }
 		  }
 	  }
